@@ -28,7 +28,7 @@ steps:
       print('##vso[task.setvariable variable=projectRoot]{}'.format(project_location))
 
 - script: |
-    sudo apt-get install libsqlite3-dev
+    sudo apt-get install libsqlite3-dev -y
     pip install pysqlite
     python -m pip install --upgrade pip setuptools wheel django
     pip install -r requirements.txt
